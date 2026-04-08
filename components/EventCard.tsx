@@ -10,14 +10,15 @@ const EventCard = () => {
             {events.map((event: Event) => (
                 <div key={event.id} className="bg-[#111115] rounded-4xl p-8 flex flex-col items-center">
                     <div className="relative">
-                        <Image
+                        {event.image ? (<Image
                             src={event.image}
                             alt={event.title}
                             width={250}
                             height={150}
                             className=""
-                        />
-                        <span className="text-[10px] absolute top-3 left-2 rounded-full bg-[#ff4d6d] px-2 py-1 ">{event.badge}</span>
+                        />) : (
+                        <span className="text-[10px] absolute top-3 left-2 rounded-full bg-[#ff4d6d] px-2 py-1 ">{event.badge}</span>)}
+                        
                     </div>
 
                     <div className="mt-6 flex flex-col gap-2">
