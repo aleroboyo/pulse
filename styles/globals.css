@@ -25,7 +25,8 @@ body {
   font-family: var(--font-syne), "Syne", "Inter"
 }
 
-button {
+button,
+a {
   cursor: pointer;
 }
 
@@ -62,4 +63,24 @@ button {
     opacity: 0.8;
     box-shadow: 0 0 12px rgba(255, 77, 109, 0.6);
   }
+}
+
+@keyframes menuSlide {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menuSlide {
+  animation: menuSlide 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
