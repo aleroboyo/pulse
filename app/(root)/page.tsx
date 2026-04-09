@@ -13,9 +13,9 @@ const Home = () => {
 
       <section>
 
-        <div className="flex flex-col gap-10 text-center mt-20">
-          <h1 className="font-syne text-[40px] font-bold leading-10">Feel the<span className="text-[#ff4d6d]"> Pulse </span>of your city</h1>
-          <p className="font-syne text-[#a1a1aa]">Discover the best events, parties, and experiences happening around you — in real time.</p>
+        <div className="flex flex-col gap-10 lg:gap-15 text-center mt-20 md:mt-30 md:px-30 lg:px-74">
+          <h1 className="font-syne text-[40px] font-bold leading-10 md:text-[54px] lg:text-[64px] md:leading-12 lg:leading-14">Feel the<span className="text-[#ff4d6d]"> Pulse </span>of your city</h1>
+          <p className="font-syne text-[#a1a1aa] lg:px-22 lg:text-[24px]">Discover the best events, parties, and experiences happening around you — in real time.</p>
           <div className="relative">
             <Input placeholder="Search events, venues..."/>
             <button className="absolute right-2 top-3"><CiSearch /></button>

@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     raysOrigin="top-center"
                     raysColor="#FF4D6D"
                     raysSpeed={0.6}
-                    lightSpread={1.2}
+                    lightSpread={2.5}
                     rayLength={20}
                     pulsating={true}
                     fadeDistance={0.85}
