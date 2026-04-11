@@ -48,7 +48,7 @@ const Hamburger = () => {
                 <Link href='/create-event' className="hover:text-[#ff4d6d] transition-colors">Create Event</Link>
                 <a href='mailto:aleroboyo0@gmail.com' className="hover:text-[#ff4d6d] transition-colors">Help</a>
                 <Link href='/login' className="text-[#ff4d6d]">Login</Link>
-                <Link href='/signup' className="text-white bg-[#ff4d6d] px-4 py-2 rounded-md hover:bg-[#ff2e63] transition-colors">Sign Up</Link>
+                <Link href='/signup' className="text-white bg-[#ff4d6d] px-4 py-2 rounded-md hover:bg-[#ff2e63] transition-colors primary-button">Sign Up</Link>
             </div>
         </div>
     )

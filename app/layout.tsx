@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";;
 import "@/styles/globals.css";
+import { PulseProvider } from "@/context/PulseContext";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -26,11 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${syne.variable} ${inter.variable} antialiased`}
+        className={`${syne.variable} ${inter.variable} antialiased h-screen`}
       >
 
         <div>
-          {children}
+          <PulseProvider>
+            {children}
+          </PulseProvider>
         </div>
 
       </body>

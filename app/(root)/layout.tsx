@@ -6,9 +6,9 @@ import Hamburger from "@/components/Hamburger"
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
 
-        <div className="relative min-h-screen bg-[#0b0b0f] px-6 py-4">
+        <div className="relative h-screen bg-[#0b0b0f] px-6 py-4">
 
-            <div className="absolute inset-0 z-0 w-full overflow-hidden h-full">
+            <div className="absolute inset-0 z-0 w-full  pointer-events-none overflow-hidden h-full">
                 <LightRays
                     raysOrigin="top-center"
                     raysColor="#FF4D6D"

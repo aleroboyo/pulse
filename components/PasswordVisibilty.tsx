@@ -14,7 +14,7 @@ const PasswordVisibility = ({ placeholder, value, onChange, name, width = "w-ful
                 <input
                     type={showPassword ? 'text' : 'password'}
                     placeholder={placeholder}
-                    className={`{width} h-10 border-[0.5px] border-[#f5f5f5]/10 rounded-md p-2 focus:shadow-xl focus:shadow-[#ff4d6d]/5 focus:outline-none`}
+                    className={`${width} h-10 border-[0.5px] border-[#f5f5f5]/10 rounded-md p-2 focus:shadow-xl focus:shadow-[#ff4d6d]/5 focus:outline-none`}
                     value={value}
                     onChange={onChange}
                     name={name}

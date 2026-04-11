@@ -55,7 +55,7 @@ const SignupForm = () => {
           {error && <p className="text-[#ff4d6d] text-sm mt-4 text-center">{error}</p>}
         </div>
 
-        <button type="submit" className="w-full text-white bg-[#ff4d6d] py-2 rounded-md hover:bg-[#ff2e63] transition-colors">
+        <button type="submit" className="w-full text-white bg-[#ff4d6d] py-2 rounded-md hover:bg-[#ff2e63] transition-colors primary-button">
           Sign Up
         </button>
 

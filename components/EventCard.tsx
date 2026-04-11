@@ -4,22 +4,8 @@ import { Event } from "@/data/events"
 import Link from "next/link"
 import Image from "next/image"
 import AnimatedContent from './AnimatedContent'
-import { usePulse } from "@/context/PulseContext"
-import { useRouter } from "next/navigation"
 
 const EventCard = ({ events }: { events: Event[] }) => {
-    const { user, bookTicket, isBooked } = usePulse()
-    const router = useRouter()
-
-    const handleBook = (e: React.MouseEvent, eventId: string) => {
-        e.preventDefault()  // stops Link from navigating
-        if (!user) {
-            router.push('/signup')
-            return
-        }
-        bookTicket(eventId)
-    }
-
     return (
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-inter text-[14px] lg:px-40 md:px-8">
 
@@ -41,7 +27,6 @@ const EventCard = ({ events }: { events: Event[] }) => {
                                         alt={event.title}
                                         width={250}
                                         height={150}
-                                        className=""
                                     />
                                 )}
 
@@ -68,17 +53,6 @@ const EventCard = ({ events }: { events: Event[] }) => {
                                     <p className="text-[#a1a1aa]">{event.category}</p>
                                 </div>
 
-                                <button
-                                    onClick={(e) => handleBook(e, event.id)}
-                                    disabled={isBooked(event.id)}
-                                    className={`w-full py-2 rounded-lg text-sm font-medium transition-all mt-2
-                                        ${isBooked(event.id)
-                                            ? 'bg-[#1F1F23] text-[#a1a1aa] cursor-not-allowed'
-                                            : 'bg-[#ff4d6d] text-white hover:bg-[#ff2e63]'
-                                        }`}
-                                >
-                                    {isBooked(event.id) ? 'Booked ✓' : user ? 'Book now' : 'Sign up to book'}
-                                </button>
                             </div>
                         </div>
                     </AnimatedContent>

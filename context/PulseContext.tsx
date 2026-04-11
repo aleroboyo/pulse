@@ -54,7 +54,6 @@ export const PulseProvider = ({ children }: { children: React.ReactNode }) => {
   const [userEvents, setUserEvents] = useState<Event[]>(() => loadFromStorage().userEvents)
   const [bookings, setBookings] = useState<Record<string, string[]>>(() => loadFromStorage().bookings)
 
-  // Only SAVE to localStorage here, never read
   useEffect(() => {
     localStorage.setItem('pulse', JSON.stringify({ user, accounts, userEvents, bookings }))
   }, [user, accounts, userEvents, bookings])
