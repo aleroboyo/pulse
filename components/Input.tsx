@@ -9,13 +9,12 @@ type InputProps = {
   name?: string
 }
 
-const Input = ({ label, placeholder, width = 'w-full', value, onChange, name }: 
-InputProps) => {
+const Input = ({ label, placeholder, width = 'w-full', value, onChange, name }: InputProps) => {
   return (
-    <div className="flex flex-col font-inter">
-
-      <label className='mt-1 text-[14px] leading-tight lg:leading-5 min-h-10 font-bold text-left md:text-lg'>{label}</label>
-
+    <div className="relative flex flex-col font-inter w-full">
+      {label && (
+        <label className='text-[14px] font-bold text-left md:text-lg mb-1'>{label}</label>
+      )}
       <input
         type='text'
         placeholder={placeholder}
@@ -24,10 +23,8 @@ InputProps) => {
         onChange={onChange}
         name={name}
       />
-
     </div>
   )
 }
-
 
 export default Input

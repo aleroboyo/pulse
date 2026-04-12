@@ -37,7 +37,7 @@ const Home = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
-              <button className="absolute right-2 top-3"><CiSearch /></button>
+              <button className="absolute right-2 bottom-3"><CiSearch /></button>
             </div>
           </div>
         </section>
