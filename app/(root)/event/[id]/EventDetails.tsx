@@ -45,7 +45,7 @@ const EventDetails = ({ event }: Props) => {
             </div>
 
             <div className="md:grid md:grid-cols-[70%_30%] md:gap-3 lg:gap-6 items-center w-full">
-                <div className="bg-[#111115] p-6 flex flex-col gap-6 mt-10 rounded-3xl">
+                <div className="bg-[#111115] p-6 lg:py-9 flex flex-col gap-6 mt-10 rounded-3xl">
                     <div className="flex items-start justify-between">
                         <h1 className="text-3xl font-bold font-syne">{event.title}</h1>
                         {event.badge && (
@@ -60,6 +60,10 @@ const EventDetails = ({ event }: Props) => {
                         <p className="flex items-center">
                             <Image src='/Calendar Icon - Transparent.png' alt="Calendar Icon" width={50} height={50} />
                             {event.date}
+                        </p>
+                        <p className="flex items-center">
+                            <Image src='/Clock Icon - Transparent.png' alt="Clock Icon" width={50} height={50} />
+                            {event.time}
                         </p>
                         <p className="flex items-center">
                             <Image src='/Location Icon - Transparent.png' alt="Location Icon" width={50} height={50} />
@@ -77,17 +81,19 @@ const EventDetails = ({ event }: Props) => {
                     <h3 className="font-syne text-xl font-semibold">Organizer</h3>
                     <p>{event.createdBy}</p>
 
-                    {/* Mobile book button */}
                     <button onClick={handleBook} disabled={booked} className={`md:hidden ${buttonClass}`}>
                         {buttonText}
                     </button>
                 </div>
 
-                {/* Desktop sidebar */}
-                <div className="hidden md:flex flex-col bg-[#111115] justify-center p-6 mt-10 rounded-3xl gap-4">
+                <div className="hidden md:flex flex-col bg-[#111115] justify-center p-4 mt-10 rounded-3xl gap-4">
                     <p className="flex items-center">
                         <Image src='/Calendar Icon - Transparent.png' alt="Calendar Icon" width={50} height={50} />
                         {event.date}
+                    </p>
+                     <p className="flex items-center">
+                        <Image src='/Clock Icon - Transparent.png' alt="Clock Icon" width={50} height={50} />
+                        {event.time}
                     </p>
                     <p className="flex items-center">
                         <Image src='/Location Icon - Transparent.png' alt="Location Icon" width={50} height={50} />

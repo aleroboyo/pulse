@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${syne.variable} ${inter.variable} antialiased h-screen`}
+        className={`${syne.variable} ${inter.variable} antialiased`}
       >
 
         <div>

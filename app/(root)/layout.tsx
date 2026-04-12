@@ -6,9 +6,9 @@ import Hamburger from "@/components/Hamburger"
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
 
-        <div className="relative h-screen bg-[#0b0b0f] px-6 py-4">
+        <div className="relative min-h-screen bg-[#0b0b0f] px-6 py-4">
 
-            <div className="absolute inset-0 z-0 w-full  pointer-events-none overflow-hidden h-full">
+            <div className="absolute inset-0 z-0 w-full h-full pointer-events-none overflow-hidden">
                 <LightRays
                     raysOrigin="top-center"
                     raysColor="#FF4D6D"
@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Hamburger />
             </div>
 
-            <div className="flex-1">
+            <div>
                 {children}
             </div>
 

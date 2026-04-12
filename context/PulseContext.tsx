@@ -23,7 +23,7 @@ type PulseContextType = {
   signup: (name: string, email: string, password: string) => { success: boolean; message: string }
   logout: () => void
   allEvents: Event[]
-  addEvent: (event: Event) => void
+  addEvent: (event: Event) => { success: boolean; message: string }  // ← fix return type
   bookTicket: (eventId: string) => void
   isBooked: (eventId: string) => boolean
   myTickets: Event[]
@@ -76,7 +76,10 @@ export const PulseProvider = ({ children }: { children: React.ReactNode }) => {
 
   const logout = () => setUser(null)
 
-  const addEvent = (event: Event) => setUserEvents(prev => [...prev, event])
+  const addEvent = (event: Event) => {
+  setUserEvents(prev => [...prev, event])
+  return { success: true, message: 'Event created!' }
+}
 
   const bookTicket = (eventId: string) => {
     if (!user) return
